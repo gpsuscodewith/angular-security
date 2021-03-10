@@ -3,7 +3,7 @@ import { UserManager, User } from 'oidc-client';
 import { Constants } from '../../constants';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { AuthContext } from '../../model/auth-context';
+import { SecurityContext } from '../authorization/security-context';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class AuthenticationService {
   private _loginChangedSubject = new Subject<boolean>();
 
   loginChanged = this._loginChangedSubject.asObservable();
-  authContext: AuthContext;
+  authContext: SecurityContext;
 
   constructor(private userManager: UserManager, private httpClient: HttpClient) {
     this.userManager.events.addAccessTokenExpired(_ => {
@@ -78,10 +78,10 @@ export class AuthenticationService {
 
   loadSecurityContext() {
     this.httpClient
-      .get<AuthContext>(`${Constants.apiRoot}Projects/AuthContext`)
+      .get<SecurityContext>(`${Constants.apiRoot}Projects/AuthContext`)
       .subscribe(
         context => {
-          this.authContext = new AuthContext();
+          this.authContext = new SecurityContext();
           this.authContext.claims = context.claims;
           this.authContext.userProfile = context.userProfile;
         },

@@ -4,14 +4,14 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute } from '@angular/router';
 
 import { DeleteDialogComponent } from '../admin/delete-dialog.component';
-import { AccountService } from '../core/account.service';
-import { ProjectService } from '../core/project.service';
-import { Utils } from '../core/utils';
-import { Milestone } from '../model/milestone';
-import { MilestoneStatus } from '../model/milestone-status';
-import { Project } from '../model/project';
+import { AccountService } from '../security/account.service';
+import { ProjectService } from '../projects/project.service';
+import { Utils } from '../utils/utils';
+import { Milestone } from '../projects/milestone';
+import { MilestoneStatus } from './milestone-status';
+import { Project } from '../projects/project';
 import { AddEditMilestoneDialogComponent } from './add-edit-milestone-dialog.component';
-import { AuthenticationService } from '../core/authentication/service';
+import { AuthenticationService } from '../security/authentication/authentication.service';
 
 @Component({
   selector: 'app-project',

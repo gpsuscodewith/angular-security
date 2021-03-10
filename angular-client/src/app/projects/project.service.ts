@@ -2,13 +2,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
 import { Constants } from '../constants';
-import { Milestone } from '../model/milestone';
-import { MilestoneStatus } from '../model/milestone-status';
-import { Project } from '../model/project';
-import { UserPermission } from '../model/user-permission';
-import { UserProfile } from '../model/user-profile';
-import { CoreModule } from './core.module';
-import { AuthenticationService } from './authentication/service';
+import { Milestone } from '../projects/milestone';
+import { MilestoneStatus } from './milestone-status';
+import { Project } from '../projects/project';
+import { UserPermission } from '../security/user-permission';
+import { UserProfile } from '../security/user-profile';
+import { AuthenticationService } from '../security/authentication/authentication.service';
 
 
 @Injectable()

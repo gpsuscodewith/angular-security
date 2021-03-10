@@ -20,11 +20,11 @@ import { ProjectListComponent } from './projects/project-list.component';
 import { ProjectComponent } from './projects/project.component';
 import { AddEditMilestoneDialogComponent } from './projects/add-edit-milestone-dialog.component';
 
-import { CoreModule } from './core/core.module';
+import { SecurityModule } from './security/security.module';
 import { SigninRedirectCallbackComponent } from './home/signin-redirect-callback.component';
 import { SignoutRedirectCallbackComponent } from './home/signout-redirect-callback.component';
 import { UnauthorizedComponent } from './home/unauthorized.component';
-import { AuthenticationConfig } from './core/authentication/authentication.config';
+import { AuthenticationConfig } from './security/authentication/authentication.config';
 import { appSettings } from './app.settings';
 
 @NgModule({
@@ -52,7 +52,7 @@ import { appSettings } from './app.settings';
     MatInputModule,
     MatSelectModule,
     AdminModule,
-    CoreModule,
+    SecurityModule,
     AppRoutingModule
   ],
   providers: [

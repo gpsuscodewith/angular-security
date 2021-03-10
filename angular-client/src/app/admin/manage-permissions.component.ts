@@ -3,11 +3,11 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute } from '@angular/router';
 
-import { AccountService } from '../core/account.service';
-import { ProjectService } from '../core/project.service';
-import { Utils } from '../core/utils';
-import { Project } from '../model/project';
-import { UserProfile } from '../model/user-profile';
+import { AccountService } from '../security/account.service';
+import { ProjectService } from '../projects/project.service';
+import { Utils } from '../utils/utils';
+import { Project } from '../projects/project';
+import { UserProfile } from '../security/user-profile';
 import { AddProjectUserDialogComponent } from './add-project-user-dialog.component';
 import { DeleteDialogComponent } from './delete-dialog.component';
 

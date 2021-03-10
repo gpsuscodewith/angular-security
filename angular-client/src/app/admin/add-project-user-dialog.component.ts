@@ -1,10 +1,10 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { UserProfile } from '../model/user-profile';
+import { UserProfile } from '../security/user-profile';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { AccountService } from '../core/account.service';
-import { ProjectService } from '../core/project.service';
-import { UserPermission } from '../model/user-permission';
-import { Utils } from '../core/utils';
+import { AccountService } from '../security/account.service';
+import { ProjectService } from '../projects/project.service';
+import { UserPermission } from '../security/user-permission';
+import { Utils } from '../utils/utils';
 
 @Component({
   selector: 'app-add-project-user-dialog',

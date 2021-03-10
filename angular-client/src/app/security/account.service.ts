@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Constants } from '../constants';
-import { UserProfile } from '../model/user-profile';
-import { CoreModule } from './core.module';
+import { UserProfile } from './user-profile';
+import { SecurityModule } from './security.module';
 
 @Injectable()
 export class AccountService {

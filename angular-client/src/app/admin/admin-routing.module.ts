@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ManageProjectsComponent } from './manage-projects.component';
 import { ManagePermissionsComponent } from './manage-permissions.component';
-import { AdminRouteGuard } from '../core/admin-route-guard';
+import { AdminRouteGuard } from '../security/admin-route-guard';
 
 const routes: Routes = [
   { path: 'admin',

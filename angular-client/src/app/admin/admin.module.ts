@@ -15,7 +15,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { DeleteDialogComponent } from './delete-dialog.component';
 import { ManagePermissionsComponent } from './manage-permissions.component';
 import { ManageProjectsComponent } from './manage-projects.component';
-import { CoreModule } from '../core/core.module';
+import { SecurityModule } from '../security/security.module';
 
 @NgModule({
   imports: [
@@ -29,7 +29,7 @@ import { CoreModule } from '../core/core.module';
     MatInputModule,
     MatSelectModule,
     AdminRoutingModule,
-    CoreModule
+    SecurityModule
   ],
   exports: [],
   declarations: [
